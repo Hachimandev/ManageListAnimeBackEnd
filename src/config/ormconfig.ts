@@ -8,7 +8,7 @@ export const ormConfig: TypeOrmModuleOptions = {
   password: 'fahappy123',
   database: 'AnimeDB',
   entities: [__dirname + '/../**/*.entity{.ts,.js}'],
-  synchronize: true,
+  synchronize: false,
   options: {
     encrypt: false,
   },
