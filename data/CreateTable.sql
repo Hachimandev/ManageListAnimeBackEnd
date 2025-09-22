@@ -53,3 +53,6 @@ CREATE TABLE User_Anime (
     FOREIGN KEY (user_id) REFERENCES [User](user_id) ON DELETE CASCADE,
     FOREIGN KEY (anime_id) REFERENCES Anime(anime_id) ON DELETE CASCADE
 );
+
+
+ALTER TABLE [User] ADD googleId VARCHAR(255) NULL;

@@ -12,6 +12,9 @@ export class User {
   @Column()
   password: string;
 
+  @Column({ nullable: true })
+  googleId: string;
+
   @Column({ default: 'user' }) // 'admin' hoặc 'user'
   role: string;
 
