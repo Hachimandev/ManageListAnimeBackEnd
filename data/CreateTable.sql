@@ -21,7 +21,7 @@ CREATE TABLE Anime (
     title NVARCHAR(200) NOT NULL,
     description NVARCHAR(MAX),
     image_url NVARCHAR(MAX),
-    release_date DATE,
+    release_date Int,
 	episode_count INT DEFAULT 0 ,
 	 status NVARCHAR(20) 
         CHECK (status IN (N'chưa hoàn thành', N'đã hoàn thành', N'drop')) 

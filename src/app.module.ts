@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ormConfig } from './config/ormconfig';
 // import { UserModule } from './user/user.module';
-// import { AnimeModule } from './anime/anime.module';
+import { AnimeModule } from './anime/anime.module';
 import { CategoryModule } from './category/category.module';
 // import { UserAnimeModule } from './user-anime/user-anime.module';
 
@@ -10,7 +10,7 @@ import { CategoryModule } from './category/category.module';
   imports: [
     TypeOrmModule.forRoot(ormConfig),
     // UserModule,
-    // AnimeModule,
+    AnimeModule,
     CategoryModule,
     // UserAnimeModule,
   ],
