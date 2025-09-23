@@ -12,11 +12,21 @@ export class AnimeService {
 
   // Lấy tất cả anime
   findAll(): Promise<Anime[]> {
-    return this.animeRepository.find();
+    return this.animeRepository.find({ relations: ['categories'] });
   }
 
   // Lấy anime theo id
   findOne(anime_id: number): Promise<Anime | null> {
-    return this.animeRepository.findOneBy({ anime_id });
+    return this.animeRepository.findOne({
+      where: { anime_id },
+      relations: ['categories'],
+    });
+  }
+
+  async getAnimeWithCategories(animeId: number) {
+    return this.animeRepository.findOne({
+      where: { anime_id: animeId },
+      relations: ['categories'], // lấy luôn categories
+    });
   }
 }
